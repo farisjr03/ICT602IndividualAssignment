@@ -15,7 +15,7 @@ public class AboutActivity extends AppCompatActivity {
 
         TextView tvGithubLink = findViewById(R.id.tvGithubLink);
         tvGithubLink.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/your-github-username"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/farisjr03/ICT602IndividualAssignment"));
             startActivity(browserIntent);
         });
     }
