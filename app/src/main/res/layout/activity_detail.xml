@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_tint">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✏️ Edit Estimation Records"
+            android:textColor="@color/text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Interactive Fields Card Content Layer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <!-- Month Input Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Month Summary Tag"
+                android:textColor="@color/text_muted"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+            <EditText
+                android:id="@+id/etDetailMonth"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:drawable/edit_text"
+                android:textColor="@color/text_dark"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:paddingLeft="8dp"/>
+
+            <!-- Energy Consumption Input Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Units Used (kWh)"
+                android:textColor="@color/text_muted"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+            <EditText
+                android:id="@+id/etDetailUnits"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:background="@android:drawable/edit_text"
+                android:textColor="@color/text_dark"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:paddingLeft="8dp"/>
+
+            <!-- Rebate Percentage Input Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rebate Rate Percentage (%)"
+                android:textColor="@color/text_muted"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+            <EditText
+                android:id="@+id/etDetailRebate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:background="@android:drawable/edit_text"
+                android:textColor="@color/text_dark"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:paddingLeft="8dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0F0F0" android:layout_marginBottom="16dp"/>
+
+            <!-- Computations Visual Feedback Displays -->
+            <TextView
+                android:id="@+id/tvDetailTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Charges: RM 0.00"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvDetailFinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Final Cost: RM 0.00"
+                android:textSize="18sp"
+                android:textColor="@color/green_success"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Command Buttons Operations Control Bar Layer -->
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Save &amp; Update Record"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/button_style"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:backgroundTint="@android:color/holo_blue_bright"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Delete Permanently"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/button_style"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:backgroundTint="@android:color/holo_blue_dark"
+            android:backgroundTint="#D32F2F"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>
